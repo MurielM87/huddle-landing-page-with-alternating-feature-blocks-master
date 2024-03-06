@@ -1,0 +1,29 @@
+#users {
+  @include flex-space-row;
+  margin: 100px;
+  border: 1px solid $grayish_blue;
+  border-radius: 10px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @include flex-space-column;
+    margin: 0px;
+  }
+
+  #users_text {
+    width: 50%;
+    margin: auto 90px;
+
+    h2 {
+      color: $very_dark_cyan;
+      margin-bottom: 40px;
+    }
+    p {
+      color: $grayish_blue;
+      line-height: 35px;
+    }
+  }
+
+  #users_img {
+    width: 50%;
+    margin: 50px;
+  }
+}

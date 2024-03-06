@@ -1,0 +1,16 @@
+#try_btn {
+    background-color: $white;
+    padding: 15px 70px;
+    color: $very_dark_cyan;
+    font-weight: 800;
+    border-radius: 30px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      font-size: 12px;
+      padding: 5px 30px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: lighten($very_dark_cyan, 20%);
+    }
+  }

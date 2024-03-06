@@ -1,0 +1,18 @@
+.start_btn {
+    width: 40%;
+    font-size: 12px;
+    background-color: $pink;
+    color: white;
+    padding: 15px 50px;
+    margin-left: 50px;
+    border-radius: 30px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      padding: 8px 15px;
+      width: 70%;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($pink, 20%);
+    }
+  }
