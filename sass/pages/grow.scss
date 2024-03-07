@@ -1,29 +1,46 @@
 #grow {
     @include flex-space-row;
     margin: 100px;
-    border: 1px solid $grayish_blue;
+    box-shadow: 0px 0px 0px 5px lighten($grayish_blue, 40%);
     border-radius: 10px;
     @media screen and (max-width: map-get($breakpoints, mobile)) {
-        @include flex-space-column;
-        margin: 0px;
+        @include flex-space-column-reverse;
+        margin: 10px;
+        margin-bottom: 30px;
     }
     
     #grow_text {
         width: 50%;
         margin: auto 90px;
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+            width: 90%;
+            margin: 20px auto;
+        }
 
         h2 {
             color: $very_dark_cyan;
             margin-bottom: 40px;
+            @media screen and (max-width: map-get($breakpoints, mobile)) {
+                text-align: center;
+            }
         }
         p {
             color: $grayish_blue;
             line-height: 35px;
+            @media screen and (max-width: map-get($breakpoints, mobile)) {
+                text-align: center;
+                font-size: 11px;
+                line-height: 25px;;
+            }
         }
     }
 
     #grow_img {
         width: 50%;
         margin: 50px;
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+            width: 80%;
+            margin: 15px auto;
+        }
     }
 }

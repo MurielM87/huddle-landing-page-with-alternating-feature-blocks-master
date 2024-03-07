@@ -58,20 +58,44 @@ body .container {
 
 #ready_card {
   position: relative;
+  height: 5%;
 }
 #ready_card #ready_item {
   position: absolute;
-  left: 30%;
-  bottom: 20%;
+  left: 25%;
+  top: -80px;
   width: 50%;
   background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
   border: 1px solid red;
   padding: 50px;
+}
+@media screen and (max-width: 375px) {
+  #ready_card #ready_item {
+    width: 90%;
+    left: 5%;
+    padding: 20px 10px;
+  }
 }
 #ready_card #ready_item h3 {
   font-weight: 800;
   color: hsl(192, 100%, 9%);
   text-align: center;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 375px) {
+  #ready_card #ready_item h3 {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+}
+#ready_card #ready_item button {
+  margin-left: 30%;
+}
+@media screen and (max-width: 375px) {
+  #ready_card #ready_item button {
+    margin-left: 15%;
+  }
 }
 
 header {
@@ -97,10 +121,12 @@ header #background_mobile {
 @media screen and (max-width: 375px) {
   header #background_mobile {
     width: 100%;
+    height: 900px;
     display: flex;
     position: absolute;
     z-index: -1;
     background-color: hsl(193, 100%, 96%);
+    margin-top: -50px;
   }
 }
 header nav {
@@ -130,28 +156,69 @@ header #presentation {
   flex-direction: row;
   justify-content: center;
 }
+@media screen and (max-width: 375px) {
+  header #presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 header #presentation #presentation_text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 60px;
 }
+@media screen and (max-width: 375px) {
+  header #presentation #presentation_text {
+    margin: 20px auto;
+  }
+}
 header #presentation #presentation_text h1 {
   line-height: 60px;
   margin: 0 50px;
+}
+@media screen and (max-width: 375px) {
+  header #presentation #presentation_text h1 {
+    margin: 10px;
+    text-align: center;
+  }
 }
 header #presentation #presentation_text p {
   line-height: 30px;
   margin-left: 50px;
   margin-right: 40px;
 }
+@media screen and (max-width: 375px) {
+  header #presentation #presentation_text p {
+    width: 80%;
+    margin: 10px;
+    text-align: center;
+  }
+}
 header #presentation img {
   width: 100%;
+}
+@media screen and (max-width: 375px) {
+  header #presentation img {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 footer {
   background-color: hsl(192, 100%, 9%);
   padding: 150px 20px 50px;
+}
+@media screen and (max-width: 375px) {
+  footer {
+    padding: 50px 20px 50px;
+  }
+}
+@media screen and (max-width: 375px) {
+  footer #footer_logo {
+    width: 70%;
+  }
 }
 footer #footer {
   display: flex;
@@ -191,6 +258,14 @@ footer #footer .column i {
   padding: 5px;
   margin-right: 5px;
 }
+@media screen and (max-width: 375px) {
+  footer #footer .column .social_network {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+  }
+}
 footer #footer .column .footer_text {
   font-size: 13px;
   margin-left: 30px;
@@ -202,6 +277,13 @@ footer #copyright {
   text-align: end;
   margin-right: 90px;
   color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 375px) {
+  footer #copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 11px;
+  }
 }
 
 .attribution {
@@ -217,32 +299,57 @@ footer #copyright {
   flex-direction: row;
   justify-content: space-between;
   margin: 100px;
-  border: 1px solid hsl(208, 11%, 55%);
+  box-shadow: 0px 0px 0px 5px #f1f2f4;
   border-radius: 10px;
 }
 @media screen and (max-width: 375px) {
   #grow {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    margin: 0px;
+    margin: 10px;
+    margin-bottom: 30px;
   }
 }
 #grow #grow_text {
   width: 50%;
   margin: auto 90px;
 }
+@media screen and (max-width: 375px) {
+  #grow #grow_text {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
 #grow #grow_text h2 {
   color: hsl(192, 100%, 9%);
   margin-bottom: 40px;
+}
+@media screen and (max-width: 375px) {
+  #grow #grow_text h2 {
+    text-align: center;
+  }
 }
 #grow #grow_text p {
   color: hsl(208, 11%, 55%);
   line-height: 35px;
 }
+@media screen and (max-width: 375px) {
+  #grow #grow_text p {
+    text-align: center;
+    font-size: 11px;
+    line-height: 25px;
+  }
+}
 #grow #grow_img {
   width: 50%;
   margin: 50px;
+}
+@media screen and (max-width: 375px) {
+  #grow #grow_img {
+    width: 80%;
+    margin: 15px auto;
+  }
 }
 
 #conversations {
@@ -250,7 +357,7 @@ footer #copyright {
   flex-direction: row;
   justify-content: space-between;
   margin: 100px;
-  border: 1px solid hsl(208, 11%, 55%);
+  box-shadow: 0px 0px 0px 5px #f1f2f4;
   border-radius: 10px;
 }
 @media screen and (max-width: 375px) {
@@ -258,24 +365,49 @@ footer #copyright {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0px;
+    margin: 10px;
+    margin-bottom: 30px;
   }
 }
 #conversations #conversation_img {
   width: 50%;
   margin: 50px;
 }
+@media screen and (max-width: 375px) {
+  #conversations #conversation_img {
+    width: 80%;
+    margin: 15px auto;
+  }
+}
 #conversations #conversation_text {
   width: 50%;
   margin: auto 90px;
+}
+@media screen and (max-width: 375px) {
+  #conversations #conversation_text {
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 #conversations #conversation_text h2 {
   color: hsl(192, 100%, 9%);
   margin-bottom: 40px;
 }
+@media screen and (max-width: 375px) {
+  #conversations #conversation_text h2 {
+    text-align: center;
+  }
+}
 #conversations #conversation_text p {
   color: hsl(208, 11%, 55%);
   line-height: 35px;
+}
+@media screen and (max-width: 375px) {
+  #conversations #conversation_text p {
+    text-align: center;
+    font-size: 11px;
+    line-height: 25px;
+  }
 }
 
 #users {
@@ -283,32 +415,58 @@ footer #copyright {
   flex-direction: row;
   justify-content: space-between;
   margin: 100px;
-  border: 1px solid hsl(208, 11%, 55%);
+  margin-bottom: 300px;
+  box-shadow: 0px 0px 0px 5px #f1f2f4;
   border-radius: 10px;
 }
 @media screen and (max-width: 375px) {
   #users {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    margin: 0px;
+    margin: 10px;
+    margin-bottom: 150px;
   }
 }
 #users #users_text {
   width: 50%;
   margin: auto 90px;
 }
+@media screen and (max-width: 375px) {
+  #users #users_text {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
 #users #users_text h2 {
   color: hsl(192, 100%, 9%);
   margin-bottom: 40px;
+}
+@media screen and (max-width: 375px) {
+  #users #users_text h2 {
+    text-align: center;
+  }
 }
 #users #users_text p {
   color: hsl(208, 11%, 55%);
   line-height: 35px;
 }
+@media screen and (max-width: 375px) {
+  #users #users_text p {
+    text-align: center;
+    font-size: 11px;
+    line-height: 25px;
+  }
+}
 #users #users_img {
   width: 50%;
   margin: 50px;
+}
+@media screen and (max-width: 375px) {
+  #users #users_img {
+    width: 80%;
+    margin: 15px auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
